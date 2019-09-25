@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title of the document</title>
+</head>
+
+<body>
+<canvas id="myCanvas" width="1000" height="700" style="border:1px solid #000000;">
+    <script>
+        var hoge = function () {
+            pos += 20
+            ctx.fillStyle = "#f" + (pos % 10).toString() + (pos % 99).toString() + (pos % 99).toString() ;
+            console.log('@@@@ make-movie.html 14 3:45', ctx.fillStyle);
+            ctx.beginPath();
+            ctx.arc(pos % 500, pos % 300, pos % 50, 0, 2 * Math.PI * pos % 100, true);
+            ctx.closePath();
+            ctx.fill();
+            console.log('@@@@ make-movie.html 19 22:29',  pos % 50, pos, 40 * pos)
+        }
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var pos = 1;
+        setInterval(hoge, 1000)
+    </script>
+</canvas>
+</body>
+
+</html>
