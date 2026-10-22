@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "scribbletune": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=22.23.4 <23"
   }
 }
